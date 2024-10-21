@@ -30,7 +30,7 @@ public class Wishlist {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    @JsonIgnoreProperties({"address", "review", "firstName", "lastName", "email", "password", "phoneNumber", "roles", "wishlist", "createdAt", "updatedAt", "updatedAt"})
+    @JsonIgnoreProperties({"address", "review", "firstName", "lastName", "email", "password", "phoneNumber", "roles", "wishlist", "createdAt", "updatedAt"})
     private User user;
 
     @ManyToOne

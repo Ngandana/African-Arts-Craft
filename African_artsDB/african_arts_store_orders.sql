@@ -32,10 +32,10 @@ CREATE TABLE `orders` (
   `status` varchar(255) DEFAULT NULL,
   `total_amount` double NOT NULL,
   `updated_at` date DEFAULT NULL,
-  `user_id` bigint NOT NULL,
+  `user` bigint NOT NULL,
   PRIMARY KEY (`order_id`),
-  KEY `FK32ql8ubntj5uh44ph9659tiih` (`user_id`),
-  CONSTRAINT `FK32ql8ubntj5uh44ph9659tiih` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
+  KEY `FK32ql8ubntj5uh44ph9659tiih` (`user`),
+  CONSTRAINT `FK32ql8ubntj5uh44ph9659tiih` FOREIGN KEY (`user`) REFERENCES `user` (`user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

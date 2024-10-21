@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="african234@african234.database.windows.net" uuid="9d22e13a-130a-424f-a220-31a0ec9d94e4">
-      <driver-ref>azure.ms</driver-ref>
+    <data-source source="LOCAL" name="sqlserver@african234.database.windows.net" uuid="c56f1aa6-a72a-4770-8f40-a4be05a4d74d">
+      <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/src/main/resources/application.properties</remarks>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
       <jdbc-url>jdbc:sqlserver://african234.database.windows.net:1433;database=african234;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</jdbc-url>
       <jdbc-additional-properties>
@@ -13,13 +15,12 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="sqlserver@african234.database.windows.net" uuid="dcb8c629-c0f6-4349-9fc3-8817d9b1d426">
-      <driver-ref>sqlserver.ms</driver-ref>
+    <data-source source="LOCAL" name="african_arts_store@localhost" uuid="205ad482-fdf8-43e8-ae2a-1928eb7d7acc">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
-      <remarks>$PROJECT_DIR$/src/main/resources/application.properties</remarks>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://african234.database.windows.net:1433;database=african234;encrypt=true;trustServerCertificate=false;hostNameInCertificate=</jdbc-url>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/african_arts_store?createDatabaseIfNotExist=true</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />

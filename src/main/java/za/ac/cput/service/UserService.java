@@ -81,7 +81,7 @@ public class UserService implements IUserService {
     }
 
     public boolean validateUser(String email, String password) {
-        User user = (User) userRepository.findByEmailAndPassword(email, password);
-        return user != null;
+        User user = userRepository.findByEmailAndPassword(email, password);
+        return user != null; // Returns true if the user is found
     }
 }

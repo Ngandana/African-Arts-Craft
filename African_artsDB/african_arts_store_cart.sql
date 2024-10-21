@@ -26,7 +26,7 @@ CREATE TABLE `cart` (
   `cart_id` bigint NOT NULL AUTO_INCREMENT,
   `created_at` date DEFAULT NULL,
   `updated_at` date DEFAULT NULL,
-  `user_id` bigint NOT NULL,
+  `user` bigint NOT NULL,
   `cart_item_id` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`cart_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

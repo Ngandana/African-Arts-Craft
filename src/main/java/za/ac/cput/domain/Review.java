@@ -29,7 +29,7 @@ public class Review implements Serializable {
     @ManyToOne
     @JoinColumn(name = "product_id")
     @JsonManagedReference("productReviewReference")
-    @JsonIgnore
+    @JsonIncludeProperties("id")
     private Product product;
 
     @ManyToOne

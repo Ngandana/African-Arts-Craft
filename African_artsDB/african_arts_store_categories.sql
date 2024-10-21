@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `categories`
+-- Table structure for table `category`
 --
 
-DROP TABLE IF EXISTS `categories`;
+DROP TABLE IF EXISTS `category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `categories` (
+CREATE TABLE `category` (
   `category_id` bigint NOT NULL AUTO_INCREMENT,
   `description` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -31,13 +31,13 @@ CREATE TABLE `categories` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `categories`
+-- Dumping data for table `category`
 --
 
-LOCK TABLES `categories` WRITE;
-/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Beautifully crafted sculptures from various artists','Sculptures'),(2,'Vibrant and expressive paintings by local artists','Paintings'),(3,'Handmade dishes and pottery with traditional designs','Handmade Dishes'),(4,'Unique handcrafted jewelry from South African artisans','Jewellery'),(5,'Artistic and functional handmade textiles','Textiles'),(6,'Decorative items including vases, wall hangings, and more','Decorative Arts'),(7,'Authentic African masks and tribal art','Tribal Art'),(8,'Art supplies and materials for DIY projects','Art Supplies'),(9,'Handcrafted wooden items including carvings and furniture','Wood Crafts'),(10,'Crafted metalwork including sculptures and decor','Metalwork'),(11,'Traditional beadwork and hand accessories','Beadwork'),(12,'Handwoven baskets and storage solutions','Baskets'),(13,'Handmade ceramic and clay items','Ceramics'),(14,'Art and craft workshops and kits for enthusiasts','Workshops & Kits'),(15,'Crafted leather goods including bags and accessories','Leather Goods'),(16,'Fine art prints and reproductions','Art Prints'),(17,'Handcrafted glass items including vases and ornaments','Glassware'),(18,'Unique handcrafted holiday decorations','Holiday Decor'),(19,'Handmade furniture and home decor items','Furniture & Home Decor');
-/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+LOCK TABLES `category` WRITE;
+/*!40000 ALTER TABLE `category` DISABLE KEYS */;
+INSERT INTO `category` VALUES (1,'Beautifully crafted sculptures from various artists','Sculptures'),(2,'Vibrant and expressive paintings by local artists','Paintings'),(3,'Handmade dishes and pottery with traditional designs','Handmade Dishes'),(4,'Unique handcrafted jewelry from South African artisans','Jewellery'),(5,'Artistic and functional handmade textiles','Textiles'),(6,'Decorative items including vases, wall hangings, and more','Decorative Arts'),(7,'Authentic African masks and tribal art','Tribal Art'),(8,'Art supplies and materials for DIY projects','Art Supplies'),(9,'Handcrafted wooden items including carvings and furniture','Wood Crafts'),(10,'Crafted metalwork including sculptures and decor','Metalwork'),(11,'Traditional beadwork and hand accessories','Beadwork'),(12,'Handwoven baskets and storage solutions','Baskets'),(13,'Handmade ceramic and clay items','Ceramics'),(14,'Art and craft workshops and kits for enthusiasts','Workshops & Kits'),(15,'Crafted leather goods including bags and accessories','Leather Goods'),(16,'Fine art prints and reproductions','Art Prints'),(17,'Handcrafted glass items including vases and ornaments','Glassware'),(18,'Unique handcrafted holiday decorations','Holiday Decor'),(19,'Handmade furniture and home decor items','Furniture & Home Decor');
+/*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

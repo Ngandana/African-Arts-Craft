@@ -31,7 +31,7 @@ CREATE TABLE `wishlist_items` (
   KEY `FKqxj7lncd242b59fb78rqegyxj` (`product_id`),
   KEY `FKp1ce2cs62p57h0uw8ydtdmbx8` (`wishlist_id`),
   CONSTRAINT `FKp1ce2cs62p57h0uw8ydtdmbx8` FOREIGN KEY (`wishlist_id`) REFERENCES `wishlist` (`wishlist_id`),
-  CONSTRAINT `FKqxj7lncd242b59fb78rqegyxj` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`)
+  CONSTRAINT `FKqxj7lncd242b59fb78rqegyxj` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

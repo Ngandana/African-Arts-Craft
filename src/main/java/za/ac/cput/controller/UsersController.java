@@ -9,19 +9,19 @@ import za.ac.cput.service.UserService;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 /**
  * UsersController.java
  *
  * @author Rethabile Ntsekhe
  * Student Num: 220455430
- * @date 24-Jul-24
+ * date 24-Jul-24
  */
 
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins = "*")
 public class UsersController {
 
     private final UserService userService;
@@ -95,6 +95,9 @@ public class UsersController {
     @GetMapping("/email/{email}")
     public ResponseEntity<List<User>> getUsersByEmail(@PathVariable("email") String email) {
         List<User> users = userService.findByEmail(email);
+        if (users.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND); // Return 404 if no users found
+        }
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
@@ -129,9 +132,10 @@ public class UsersController {
     }
 
     @PostMapping("/validate")
-    public ResponseEntity<String> validateUser(@RequestBody User user) {
-        String email = user.getEmail();
-        String password = user.getPassword();
+    public ResponseEntity<String> validateUser(@RequestBody Map<String, String> body) {
+        String email = body.get("email");
+        String password = body.get("password");
+
         boolean isValid = userService.validateUser(email, password);
         if (isValid) {
             return ResponseEntity.ok("User is valid");

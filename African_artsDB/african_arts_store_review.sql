@@ -28,7 +28,7 @@ CREATE TABLE `review` (
   `created_at` date DEFAULT NULL,
   `product_id` bigint NOT NULL,
   `rating` int NOT NULL,
-  `user_id` bigint NOT NULL,
+  `user` bigint NOT NULL,
   PRIMARY KEY (`review_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

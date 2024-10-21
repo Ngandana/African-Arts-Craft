@@ -25,10 +25,10 @@ DROP TABLE IF EXISTS `wishlist`;
 CREATE TABLE `wishlist` (
   `wishlist_id` bigint NOT NULL AUTO_INCREMENT,
   `created_at` date DEFAULT NULL,
-  `user_id` bigint NOT NULL,
+  `user` bigint NOT NULL,
   PRIMARY KEY (`wishlist_id`),
-  KEY `FKtrd6335blsefl2gxpb8lr0gr7` (`user_id`),
-  CONSTRAINT `FKtrd6335blsefl2gxpb8lr0gr7` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
+  KEY `FKtrd6335blsefl2gxpb8lr0gr7` (`user`),
+  CONSTRAINT `FKtrd6335blsefl2gxpb8lr0gr7` FOREIGN KEY (`user`) REFERENCES `user` (`user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

@@ -1,7 +1,5 @@
 package za.ac.cput.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -59,14 +57,14 @@ public class User implements Serializable {
     @Column(name = "updated_at")
     private LocalDate updatedAt;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, orphanRemoval = true)
+    //@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER)
     @JsonManagedReference("userAddressReference")
     private List<Address> address = new ArrayList<>();
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
-    @JsonBackReference("userReviewReference")
-    @JsonIgnore
+    @JsonManagedReference("userReviewReference")
     private List<Review> review = new ArrayList<>();
 
     public User() {
